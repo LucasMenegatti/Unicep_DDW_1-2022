@@ -51,8 +51,7 @@ body {
     margin-left: 5rem;
 }
 
-
-.navegacao__link {
+.navegacao li a {
     font-size: 3rem;
     text-decoration: none;
     color: white;
