@@ -1,3 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     background: #1d1231;
     color: white;
@@ -6,10 +11,18 @@ body {
 
 .titulo {
     font-size: 3rem;
+    padding-bottom: .4em;
+    font-weight: bold;
+}
+
+.subtitulo {
+    font-size: 2rem;
+    padding: 1em 0 .5em 0;
 }
 
 .texto {
     font-size: 1.3rem;
+    padding-bottom: 1rem;
 }
 
 .container {
@@ -18,11 +31,129 @@ body {
 }
 
 .container__texto {
-    margin: 10% 0 auto 50%;
+    margin: 15% 0 auto 50%;
     text-align: right;
 }
 
 .container__imagem {
     transform: scaleX(-1);
     margin: 2rem 60% auto auto;
+}
+
+.navegacao {
+    width: fit-content;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+.navegacao li {
+    display: inline-block;
+    margin-left: 5rem;
+}
+
+
+.navegacao__link {
+    font-size: 3rem;
+    text-decoration: none;
+    color: white;
+}
+
+.navegacao__link:hover {
+    text-decoration: underline;
+}
+
+.secao {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.secao__texto {
+    text-align: left;
+    margin: auto 20% auto 3rem;
+}
+
+.lista {
+    margin-left: 3rem;
+}
+
+.secao__texto-b {
+    text-align: right;
+    margin: auto 0 auto 20%;
+}
+
+.selo {
+    width: fit-content;
+    margin: .2rem auto 1rem auto;
+}
+
+.secao__imagem {
+    margin: auto 0;
+    text-align: center;
+}
+
+.secao-a {
+    background-color: #3b206d;
+}
+
+#imagem-guara-02 {
+    width: 70%;
+    padding: 2rem 0;
+}
+
+#sou_amigo_do_lobo {
+    width: 70%;
+    padding: 2rem 0;
+}
+
+/* Vídeo */
+
+.video {
+    text-align: center;
+    background-color: #3b206d;
+    padding: 1rem 0;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #1d1231;
+    text-align: center;
+}
+
+.footer div {
+    width: 70%;
+    margin: auto;
+}
+
+.footer div > .text {
+    text-align: justify;
+}
+
+.footer ul {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.footer ul li {
+    margin-bottom: .2rem;
+}
+
+.footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.ultima-barra {
+    background-color: #3b206d;
+    text-align: center;
+    font-size: .8rem;
+    padding: .5rem;
+}
+
+.ultima-barra a {
+    color: white;
 }
