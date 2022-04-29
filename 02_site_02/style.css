@@ -1,0 +1,28 @@
+body {
+    background: #1d1231;
+    color: white;
+    font-family: sans-serif;
+}
+
+.titulo {
+    font-size: 3rem;
+}
+
+.texto {
+    font-size: 1.3rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.container__texto {
+    margin: 10% 0 auto 50%;
+    text-align: right;
+}
+
+.container__imagem {
+    transform: scaleX(-1);
+    margin: 2rem 60% auto auto;
+}
