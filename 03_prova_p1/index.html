@@ -93,7 +93,7 @@
     /* Estilos do Header Menu */
     .header__container {
         background: #202020;
-        height: 20vh;
+        min-height: 20vh;
         display: grid;
         grid-template-columns: 44% 56%;
     }
@@ -127,7 +127,7 @@
 
     /* Estilos do Banner */
     .banner__container {
-        height: 45vh;
+        min-height: 40vh;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         background-image: url(./fundo-preto-da-parede-de-tijolo.jpg);
@@ -149,7 +149,7 @@
 
     /* Estilos do Footer */
     .footer__container {
-        height: 30vh;
+        min-height: 25vh;
         background: #202020;
         display: flex;
         justify-content: center;
@@ -208,10 +208,9 @@
     }
 
     /* Estilos da Ultima Barra */
-    .ultima-barra {
-        height: 5vh;
+    .ultima-barra p {
         text-align: center;
         font-size: .8rem;
-        margin: 1rem 0;
+        padding-top: 1rem;
     }
 </style>
