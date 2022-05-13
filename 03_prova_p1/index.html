@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburgueria</title>
+</head>
+<body>
+    <header class="header__container">
+        <div class="header__div-logo">
+            <img class="imagem-logo-header" src="./logo.png" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./sobreNos.html">Sobre Nós</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+                <li><a href="./cardapio.html">Cardápio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner__container">
+        <div>
+            <h1>O Hambúrguer mais <strong>delicioso</strong> que você já experimentou</h1>
+        </div>
+        <div>
+            <img src="./imagem-banner.png" alt="">
+        </div>
+    </section>
+
+    <footer class="footer__container">
+        <div class="footer__div-logo">
+            <img class="imagem-logo-footer" src="./logo.png" alt="">
+            <h3>Lorem ipsum dolor, sit amet</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, quas cum ullam doloremque inventore expedita neque quos minima assumenda adipisci quisquam dicta placeat dolor, animi est deserunt velit, minus laudantium.</p>
+        </div>
+        <div class="footer__div-links">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./sobreNos.html">Sobre Nós</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+                <li><a href="./cardapio.html">Cardápio</a></li>
+            </ul>
+        </div>
+        <div class="footer__div-video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JQFYEKijFIw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </footer>
+    <div class="ultima-barra">
+        <p>Site desenvolvido por Lucas Menegatti, Bruno e Elias Kalil como avaliação para a disciplina de "Desenvolvimento de Websites" do curso de Engenharia da Computação - 2022</p>
+    </div>
+</body>
+</html>
+
+<style>
+    /* Estilo Geral */
+    body {
+        background: black;
+        font-family: sans-serif;
+        color: white;
+    }
+
+    .imagem-logo-header {
+        margin-top: 2rem;
+        width: 250px;
+    }
+
+    .imagem-logo-footer {
+        margin-top: 2rem;
+        width: 200px;
+    }
+
+    /* Estilos do Header Menu */
+    .header__container {
+        background: #202020;
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+
+    .header__div-logo {
+        margin: 0 0 0 auto;
+    }
+
+    .header__container nav {
+        margin: auto 0;
+    }
+
+    .header__container nav ul {
+        display: flex;
+        justify-content: left;
+        gap: 2rem;
+        list-style: none;
+    }
+
+    .header__container nav ul li a {
+        font-size: 1.5rem;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .header__container nav ul li a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    /* Estilos do Banner */
+    .banner__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background-image: url(./fundo-preto-da-parede-de-tijolo.jpg);
+    }
+
+    .banner__container div h1 {
+        font-size: 2.5rem;
+        color: white;
+        width: 40%;
+        margin: 15% 0 15% auto;
+    }
+
+    .banner__container div strong {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        color: red;
+        width: 40%;
+    }
+
+    .banner__container div h1 {
+        color: white;
+    }
+
+    /* Estilos do Footer */
+    .footer__container {
+        background: #202020;
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+        flex-wrap: wrap;
+    }
+
+    .footer__div-logo {
+        max-width: 300px;
+        text-align: center;
+    }
+
+    /* Estilos da Ultima Barra */
+    .ultima-barra {
+        text-align: center;
+        font-size: .8rem;
+    }
+
+    .footer__div-links {
+        margin: auto 0;
+    }
+
+    .footer__div-links ul li {
+        list-style: none;
+    }
+
+    .footer__div-links ul li a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .footer__div-links ul li a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .footer__div-video {
+        margin: auto 0;
+    }
+</style>
