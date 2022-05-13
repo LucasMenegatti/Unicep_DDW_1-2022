@@ -16,7 +16,7 @@
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./sobreNos.html">Sobre Nós</a></li>
                 <li><a href="./contato.html">Contato</a></li>
-                <li><a href="./cardapio.html">Cardápio</a></li>
+                <li><a class="botao" href="./cardapio.html">Cardápio</a></li>
             </ul>
         </nav>
     </header>
@@ -37,11 +37,17 @@
             <p>Hamburgeria Web Design, fundada em 2000, juntamos as ideias de 3 grandes mentes alunos da engenharia da computação, para trazer à vocês o que há de melhor se tratando de hambúrgueres, tecnologia e criatividade.</p>
         </div>
         <div class="footer__div-links">
-            <ul>
+            <ul class="footer__lista-links">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./sobreNos.html">Sobre Nós</a></li>
                 <li><a href="./contato.html">Contato</a></li>
                 <li><a href="./cardapio.html">Cardápio</a></li>
+            </ul>
+            <ul class="footer__midias-sociais">
+                <li><a href="#"><img src="./facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="./instagram.png" alt=""></a></li>
+                <li><a href="#"><img src="/youtube.png" alt=""></a></li>
+                <li><a href="#"><img src="./whatsapp.png" alt=""></a></li>
             </ul>
         </div>
         <div class="footer__div-video">
@@ -73,19 +79,31 @@
         margin: 1rem 2rem;
     }
 
+    .botao {
+        background-color: red;
+        color: white;
+        padding: 1rem;
+        border-radius: 20px;
+    }
+
+    .botao:hover {
+        background-color: rgb(187, 0, 0);
+    }
+
     /* Estilos do Header Menu */
     .header__container {
         background: #202020;
+        height: 20vh;
         display: grid;
-        grid-template-columns: 45% 55%;
+        grid-template-columns: 44% 56%;
     }
 
     .header__div-logo {
-        margin: 0 0 0 auto;
+        margin: auto 0 auto auto;
     }
 
     .header__container nav {
-        margin: auto 0;
+        margin: auto 1rem;
     }
 
     .header__container nav ul {
@@ -109,31 +127,29 @@
 
     /* Estilos do Banner */
     .banner__container {
+        height: 45vh;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         background-image: url(./fundo-preto-da-parede-de-tijolo.jpg);
     }
 
     .banner__container div h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         color: white;
-        width: 40%;
+        width: 30%;
         margin: 15% 0 15% auto;
     }
 
     .banner__container div strong {
-        font-size: 2.5rem;
+        font-size: 2rem;
         text-transform: uppercase;
+        font-weight: bold;
         color: red;
-        width: 40%;
-    }
-
-    .banner__container div h1 {
-        color: white;
     }
 
     /* Estilos do Footer */
     .footer__container {
+        height: 30vh;
         background: #202020;
         display: flex;
         justify-content: center;
@@ -164,20 +180,27 @@
         margin: auto 0;
     }
 
-    .footer__div-links ul li {
+    .footer__lista-links li {
         list-style: none;
         margin-bottom: .5rem;
     }
 
-    .footer__div-links ul li a {
+    .footer__lista-links li a {
         color: white;
         text-decoration: none;
         text-transform: uppercase;
     }
 
-    .footer__div-links ul li a:hover {
+    .footer__lista-links li a:hover {
         text-decoration: underline;
         cursor: pointer;
+    }
+
+    .footer__midias-sociais {
+        list-style: none;
+        display: flex;
+        gap: .5rem;
+        margin-top: 3rem;
     }
 
     .footer__div-video {
@@ -186,8 +209,9 @@
 
     /* Estilos da Ultima Barra */
     .ultima-barra {
+        height: 5vh;
         text-align: center;
         font-size: .8rem;
-        margin: 1rem;
+        margin: 1rem 0;
     }
 </style>
