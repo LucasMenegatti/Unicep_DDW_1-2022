@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>Hamburgueria WebDesign! - Conheça nossa Hamburgueria!</title>
+    <style>
+        /* Estilo Geral */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background: black;
+            font-family: sans-serif;
+            color: white;
+        }
+    
+        .imagem-logo-header {
+            margin-top: 2rem;
+            width: 250px;
+            margin: 1rem 2rem;
+        }
+    
+        .botao {
+            background-color: red;
+            color: white;
+            padding: 1rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+    
+        .botao:hover {
+            background-color: rgb(187, 0, 0);
+        }
+    
+        /* Estilos do Header Menu */
+        .header__container {
+            background: #202020;
+            min-height: 20vh;
+            display: grid;
+            grid-template-columns: 44% 56%;
+            font-size: 1.5rem;
+        }
+    
+        .header__div-logo {
+            margin: auto 0 auto auto;
+        }
+    
+        .header__container nav {
+            margin: auto 1rem;
+        }
+    
+        .header__container nav ul {
+            display: flex;
+            justify-content: left;
+            gap: 2rem;
+            list-style: none;
+        }
+    
+        .link {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    
+        .link:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    
+        /* Estilos do Conteúdo */
+        .contato {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .contato__div-esquerda {
+            margin: auto 2rem auto auto;
+        }
+
+        .contato__div-esquerda h2 {
+            margin-bottom: 1rem;
+        }
+
+        .contato__div-esquerda ul {
+            margin-left: 1rem;
+        }
+
+        .contato__div-esquerda ul li {
+            margin-bottom: .5rem;
+        }
+
+        .contato__div-esquerda form {
+            margin: 0 auto;
+        }
+
+        .contato__div-esquerda form input, .contato__div-esquerda form textarea {
+            width: 80%;
+            padding: .3rem;
+            margin-bottom: .3rem;
+            resize: none;
+        }
+
+        #enviar {
+            width: 50%;
+            background-color: red;
+            color: white;
+            padding: 1rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .contato__div-direita {
+            width: 50%;
+            margin: 2rem 0;
+        }
+
+        .contato__div-direita iframe {
+            width: 100%;
+            height: 400px;
+        }
+    
+        /* Estilos do Footer */
+        .footer__container {
+            min-height: 25vh;
+            background: #202020;
+            display: flex;
+            justify-content: center;
+            gap: 5rem;
+            padding: 2rem;
+            flex-wrap: wrap;
+            font-size: .9rem;
+        }
+    
+        .footer__div-logo {
+            max-width: 300px;
+            text-align: center;
+        }
+    
+        .imagem-logo-footer {
+            margin: 1rem 0;
+            width: 200px;
+        }
+    
+        .footer__div-logo h3 {
+            margin-bottom: 1rem;
+        }
+    
+        .footer__div-logo p {
+            text-align: justify;
+        }
+    
+        .footer__div-links {
+            margin: auto 0;
+        }
+    
+        .footer__lista-links li {
+            list-style: none;
+            margin-bottom: .5rem;
+        }
+    
+        .footer__midias-sociais {
+            list-style: none;
+            display: flex;
+            gap: .5rem;
+            margin-top: 3rem;
+        }
+    
+        .footer__div-video {
+            margin: auto 0;
+        }
+    
+        /* Estilos da Ultima Barra */
+        .ultima-barra p {
+            text-align: center;
+            font-size: .7rem;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Aqui é o header e o menu de navegação -->
+    <header class="header__container">
+        <div class="header__div-logo">
+            <img class="imagem-logo-header" src="./logo.png" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li><a class="link" href="./index.html">Home</a></li>
+                <li><a class="link" href="./sobreNos.html">Sobre Nós</a></li>
+                <li><a class="link" href="./contato.html">Contato</a></li>
+                <li><a class="botao" href="./cardapio.html">Cardápio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Aqui começa o conteúdo -->
+    <section class="contato">
+        <div class="contato__div-esquerda">
+            <h2>Contato</h2>
+            <ul>
+                <li>Telefone: (16) 3456-7890</li>
+                <li>E-mail: hamburguerwebdesign@abcdef.com.br</li>
+                <li>Whatsapp: (16) 9 9999-9999</li>
+            </ul>
+            <form class="contato--formulario">
+                <input type="text" placeholder="Nome"><br>
+                <input type="email" placeholder="E-mail"><br>
+                <input type="text" placeholder="Assunto"><br>
+                <textarea rows="4" name="mensagem" placeholder="Digite aqui a sua mensagem"></textarea>
+                <input id="enviar" type="submit" value="enviar">
+            </form>
+        </div>
+        <div class="contato__div-direita">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4399.779070934799!2d-47.932365658200325!3d-21.98223188839963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b876fb799a433f%3A0xa0ac3fffc8b5f135!2sUnicep%20-%20Centro%20Universit%C3%A1rio%20Central%20Paulista!5e0!3m2!1spt-BR!2sbr!4v1652618270313!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>   
+
+    <!-- Aqui é o footer -->
+    <footer class="footer__container">
+        <div class="footer__div-logo">
+            <img class="imagem-logo-footer" src="./logo.png" alt="">
+            <h3>Tecnologia e Sabor Aliados!</h3>
+            <p>Hamburgeria Web Design, fundada em 2000, juntamos as ideias de 3 grandes mentes alunos da engenharia da computação, para trazer à vocês o que há de melhor se tratando de hambúrgueres, tecnologia e criatividade.</p>
+        </div>
+        <div class="footer__div-links">
+            <ul class="footer__lista-links">
+                <li><a class="link" href="./index.html">Home</a></li>
+                <li><a class="link" href="./sobreNos.html">Sobre Nós</a></li>
+                <li><a class="link" href="./contato.html">Contato</a></li>
+                <li><a class="link" href="./cardapio.html">Cardápio</a></li>
+            </ul>
+            <ul class="footer__midias-sociais">
+                <li><a href="#"><img src="./facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="./instagram.png" alt=""></a></li>
+                <li><a href="#"><img src="/youtube.png" alt=""></a></li>
+                <li><a href="#"><img src="./whatsapp.png" alt=""></a></li>
+            </ul>
+        </div>
+        <div class="footer__div-video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JQFYEKijFIw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </footer>
+
+    <!-- Aqui é a barra de fundo preto no finalzinho -->
+    <div class="ultima-barra">
+        <p>Site desenvolvido por Lucas Menegatti, Bruno e Elias Kalil como avaliação para a disciplina de "Desenvolvimento de Websites" do curso de Engenharia da Computação - 2022</p>
+    </div>
+</body>
+</html>
