@@ -39,28 +39,18 @@
             background-color: rgb(187, 0, 0);
         }
     
-        /* Estilos do Header Menu */
-        .header__container {
-            background: #202020;
-            min-height: 20vh;
-            display: grid;
-            grid-template-columns: 44% 56%;
-            font-size: 1.5rem;
-        }
-    
+        /* Estilos do Header Menu */    
         .header__div-logo {
-            margin: auto 0 auto auto;
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        .header__div-logo a img {
+            max-width: 300px;
         }
     
         .header__container nav {
             margin: auto 1rem;
-        }
-    
-        .header__container nav ul {
-            display: flex;
-            justify-content: left;
-            gap: 2rem;
-            list-style: none;
         }
     
         .link {
@@ -76,20 +66,29 @@
     
         /* Estilos do Banner */
         .banner__container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
             background-image: url(./fundo-preto-da-parede-de-tijolo.jpg);
         }
-    
-        .banner__container div {
+
+        .div-imagem {
+            max-width: 300px;
             margin: auto 0;
         }
+
+        .div-imagem img {
+            width: 100%;
+        }
     
-        .banner__container div h1 {
-            font-size: 2rem;
+        .div-texto {
+            height: fit-content;
+            margin: auto 0;
+            max-width: 300px;
+        }
+
+        .div-texto h1 {
             color: white;
-            width: 30%;
-            margin: 15% 0 15% auto;
         }
     
         .banner__container div strong {
@@ -146,7 +145,14 @@
         }
     
         .footer__div-video {
+            width: 400px;
+            height: 220px;
             margin: auto 0;
+        }
+
+        .footer__div-video iframe {
+            width: 100%;
+            height: 100%;
         }
     
         /* Estilos da Ultima Barra */
@@ -155,13 +161,104 @@
             font-size: .7rem;
             padding: 1rem 0;
         }
+
+        @media (max-width: 900px) {            
+            .div-texto h1 {
+                font-size: 1.2rem;
+            }
+            
+            .header__container {
+                background: #202020;
+                padding: .1rem;
+                font-size: 1.5rem;
+            }
+            
+            .header__container nav ul {
+                display: none;
+                justify-content: left;
+                gap: 2rem;
+                list-style: none;
+            }
+            
+            .hamburguer {
+                width: fit-content;
+                margin: 0 auto;
+            }
+
+            .hamburguer__linha {
+                display: block;
+                height: 6px;
+                width: 40px;
+                margin: 8px 0;
+                background-color: white;
+                -webkit-transition: 0.3s;
+                transition: 0.3s;
+            }
+
+            .burguer__menu {
+                position: fixed;
+                top: -10000px;
+                gap: 0;
+                flex-direction: column;
+                background-color: rgba(0, 0, 0, 0.95);
+                width: 100%;
+                text-align: center;
+                -webkit-transition: 0.3s;
+                transition: 0.3s;
+            }
+
+            .burguer__menu ul li {
+                padding: .5rem 0;
+            }
+
+            .burguer__menu.active {
+                top: 267px;
+            }
+
+            .hamburguer.active .hamburguer__linha:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburguer.active .hamburguer__linha:nth-child(1) {
+                transform: translateY(14px) rotate(45deg);
+            }
+
+            .hamburguer.active .hamburguer__linha:nth-child(3) {
+                transform: translateY(-14px) rotate(-45deg);
+            }
+        }
+
+        @media (min-width: 901px) {
+            .div-texto h1 {
+                font-size: 2rem;
+            }
+
+            .burguer__menu {
+                display: none;
+            }
+
+            .header__container {
+            background: #202020;
+            min-height: 20vh;
+            display: grid;
+            grid-template-columns: 40% 60%;
+            font-size: 1.5rem;
+            }
+            
+            .header__container nav ul {
+            display: flex;
+            justify-content: left;
+            gap: 2rem;
+            list-style: none;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Aqui é o header e o menu de navegação -->
     <header class="header__container">
         <div class="header__div-logo">
-            <img class="imagem-logo-header" src="./logo.png" alt="">
+            <a href="./index.html"><img class="imagem-logo-header" src="./logo.png" alt=""></a>
         </div>
         <nav>
             <ul>
@@ -171,14 +268,27 @@
                 <li><a class="botao" href="./cardapio.html">Cardápio</a></li>
             </ul>
         </nav>
+        <div class="hamburguer">
+            <span class="hamburguer__linha"></span>
+            <span class="hamburguer__linha"></span>
+            <span class="hamburguer__linha"></span>
+        </div>
+        <div class="burguer__menu">
+            <ul>
+                <li><a class="link" href="./index.html">Home</a></li>
+                <li><a class="link" href="./sobreNos.html">Sobre Nós</a></li>
+                <li><a class="link" href="./contato.html">Contato</a></li>
+                <li><a class="link" href="./cardapio.html">Cardápio</a></li>
+            </ul>
+        </div>
     </header>
 
     <!-- Aqui é o banner do site, que tem o texto e o hamburguer -->
     <section class="banner__container">
-        <div>
+        <div class="div-texto">
             <h1>O Hambúrguer mais <strong>delicioso</strong> que você já experimentou</h1>
         </div>
-        <div>
+        <div class="div-imagem">
             <img src="./imagem-banner.png" alt="">
         </div>
     </section>
@@ -205,7 +315,7 @@
             </ul>
         </div>
         <div class="footer__div-video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/JQFYEKijFIw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/JQFYEKijFIw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </footer>
 
@@ -213,5 +323,19 @@
     <div class="ultima-barra">
         <p>Site desenvolvido por Lucas Gentil Menegatti (RA: 4201000), Bruno Rodrigues Fernandes (RA: 4200975) e Elias Kalil M. Saffi (RA: 4200987) como avaliação para a disciplina de "Desenvolvimento de Websites" do curso de Engenharia da Computação - 2022</p>
     </div>
+    <script>
+        const hamburguer = document.querySelector(".hamburguer");
+        const burguerMenu = document.querySelector(".burguer__menu");
+
+        hamburguer.addEventListener("click", () => {
+            hamburguer.classList.toggle("active");
+            burguerMenu.classList.toggle("active");
+        })
+
+        document.querySelectorAll(".link").forEach(n => n.addEventListener("click", () => {
+            hamburguer.classList.remove("active");
+            burguerMenu.classList.remove("active");
+        }))
+    </script>
 </body>
 </html>

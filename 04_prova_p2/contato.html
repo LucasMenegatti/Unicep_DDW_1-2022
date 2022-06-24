@@ -276,7 +276,7 @@
                     // Se erro !=0 entao alguma caixa de edicao nao foi preenchida entao, preventDefault() é executado, cancelando assim o evento de click do botao.
                     if (erro === true) evt.preventDefault(); else {
                         alert("mensagem enviada!"); // Notifica que a mensagem foi enviada
-                        evt.preventDefault(); //Acrescentei para evitar que seja exibido o erro 405
+                        evt.preventDefault(); //Acrescentei para evitar que seja exibido o erro 405, mas será retirado com a implementação do back-end
                         location.reload(); // Recarrega a página
                     }
 
