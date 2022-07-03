@@ -309,6 +309,10 @@ body {
     margin-bottom: 1rem;
 }
 
+.cardapio__cards {
+    display: none;
+}
+
 @media screen and (max-width:900px) {
     .cardapio-titulo {
         font-size: 1.3rem;
