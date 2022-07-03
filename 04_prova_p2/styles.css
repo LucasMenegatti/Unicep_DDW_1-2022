@@ -1,0 +1,343 @@
+/* Estilo Geral */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: black;
+    font-family: sans-serif;
+    color: white;
+}
+
+.imagem-logo-header {
+    margin-top: 2rem;
+    width: 250px;
+    margin: 1rem 2rem;
+}
+
+.botao {
+    background-color: red;
+    color: white;
+    padding: 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.botao:hover {
+    background-color: rgb(187, 0, 0);
+}
+
+/* Estilos do Header Menu */    
+.header__div-logo {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.header__div-logo a img {
+    max-width: 300px;
+}
+
+.header__container nav {
+    margin: auto 1rem;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Estilos do Banner */
+.banner__container {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-image: url("./imagens/fundo-preto-da-parede-de-tijolo.jpg");
+}
+
+.div-imagem {
+    max-width: 300px;
+    margin: auto 0;
+}
+
+.div-imagem img {
+    width: 100%;
+}
+
+.div-texto {
+    height: fit-content;
+    margin: auto 0;
+    max-width: 300px;
+}
+
+.div-texto h1 {
+    color: white;
+}
+
+.banner__container div strong {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: red;
+}
+
+/* Estilos do Footer */
+.footer__container {
+    min-height: 25vh;
+    background: #202020;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+    font-size: .9rem;
+}
+
+.footer__div-logo {
+    max-width: 300px;
+    text-align: center;
+}
+
+.imagem-logo-footer {
+    margin: 1rem 0;
+    width: 200px;
+}
+
+.footer__div-logo h3 {
+    margin-bottom: 1rem;
+}
+
+.footer__div-logo p {
+    text-align: justify;
+}
+
+.footer__div-links {
+    margin: auto 0;
+}
+
+.footer__lista-links li {
+    list-style: none;
+    margin-bottom: .5rem;
+}
+
+.footer__midias-sociais {
+    list-style: none;
+    display: flex;
+    gap: .5rem;
+    margin-top: 3rem;
+}
+
+.footer__div-video {
+    width: 400px;
+    height: 220px;
+    margin: auto 0;
+}
+
+.footer__div-video iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilos da Ultima Barra */
+.ultima-barra p {
+    text-align: center;
+    font-size: .7rem;
+    padding: 1rem 0;
+}
+
+@media (max-width: 900px) {         
+    .div-texto h1 {
+        font-size: 1.2rem;
+    }
+    
+    .header__container {
+        background: #202020;
+        padding: .1rem;
+        font-size: 1.5rem;
+    }
+    
+    .header__container nav ul {
+        display: none;
+        justify-content: left;
+        gap: 2rem;
+        list-style: none;
+    }
+    
+    .hamburguer {
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .hamburguer__linha {
+        display: block;
+        height: 6px;
+        width: 40px;
+        margin: 8px 0;
+        background-color: white;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+    }
+
+    .burguer__menu {
+        position: absolute;
+        top: -10000px;
+        gap: 0;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.95);
+        width: 100%;
+        text-align: center;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+    }
+
+    .burguer__menu ul li {
+        padding: .5rem 0;
+    }
+
+    .burguer__menu.active {
+        top: 267px;
+    }
+
+    .hamburguer.active .hamburguer__linha:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburguer.active .hamburguer__linha:nth-child(1) {
+        transform: translateY(14px) rotate(45deg);
+    }
+
+    .hamburguer.active .hamburguer__linha:nth-child(3) {
+        transform: translateY(-14px) rotate(-45deg);
+    }
+
+    .footer__div-video {
+        width: 250px;
+        height: 200px;
+        margin: auto;
+    }
+}
+
+@media (min-width: 901px) {
+    .div-texto h1 {
+        font-size: 2rem;
+    }
+
+    .burguer__menu {
+        display: none;
+    }
+
+    .header__container {
+    background: #202020;
+    min-height: 20vh;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    font-size: 1.5rem;
+    }
+    
+    .header__container nav ul {
+    display: flex;
+    justify-content: left;
+    gap: 2rem;
+    list-style: none;
+    }
+}
+
+
+/**************************************************************************
+/*                       Página Cardápio
+/**************************************************************************/
+
+.cardapio-titulo {
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 1.8rem;
+}
+
+.cardapio-titulo strong {
+    color: red;
+}
+
+.cardapio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    line-height: 1.5em;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.cardapio__div-esquerda-img {
+    width: 50%;
+    margin: auto 3rem auto auto;
+}
+
+.cardapio__div-direita-img {
+    width: 50%;
+    margin: auto 0;
+}
+
+.cardapio__div-esquerda-img img, .cardapio__div-direita-img img {
+    width: 100%;
+}
+
+.cardapio__div-esquerda-texto {
+    width: 40%;
+    margin: auto 3rem auto auto;
+}
+
+.cardapio__div-direita-texto {
+    width: 40%;
+    margin: auto auto auto 3rem;
+}
+
+.cardapio__div-esquerda-texto h2, .cardapio__div-direita-texto h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+}
+
+.cardapio__div-esquerda-texto p, .cardapio__div-direita-texto p {
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width:900px) {
+    .cardapio-titulo {
+        font-size: 1.3rem;
+    }
+
+    .cardapio {
+        display: none;
+    }
+
+    .cardapio__cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .cardapio__card {
+        max-width: 270px;
+        padding: 1rem;
+        margin: 1rem;
+        background-color: #505050;
+        border-radius: 8px;
+    }
+
+    .card__imagem, .card__imagem img {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .card__texto {
+        text-align: center;
+    }
+}

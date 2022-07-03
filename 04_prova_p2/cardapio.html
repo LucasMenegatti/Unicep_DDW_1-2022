@@ -4,194 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./imagens/icones/favicon.ico">
     <title>Hamburgueria WebDesign! - Conheça nossa Hamburgueria!</title>
-    <style>
-        /* Estilo Geral */
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            background: black;
-            font-family: sans-serif;
-            color: white;
-        }
-    
-        .imagem-logo-header {
-            margin-top: 2rem;
-            width: 250px;
-            margin: 1rem 2rem;
-        }
-    
-        .botao {
-            background-color: red;
-            color: white;
-            padding: 1rem;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 1.5rem;
-            text-transform: uppercase;
-        }
-    
-        .botao:hover {
-            background-color: rgb(187, 0, 0);
-        }
-    
-        /* Estilos do Header Menu */
-        .header__container {
-            background: #202020;
-            min-height: 20vh;
-            display: grid;
-            grid-template-columns: 44% 56%;
-            font-size: 1.5rem;
-        }
-    
-        .header__div-logo {
-            margin: auto 0 auto auto;
-        }
-    
-        .header__container nav {
-            margin: auto 1rem;
-        }
-    
-        .header__container nav ul {
-            display: flex;
-            justify-content: left;
-            gap: 2rem;
-            list-style: none;
-        }
-    
-        .link {
-            color: white;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-    
-        .link:hover {
-            text-decoration: underline;
-            cursor: pointer;
-        }
-    
-        /* Estilos do Conteúdo */
-        .cardapio-titulo {
-            text-align: center;
-            margin: 1rem 0;
-            font-size: 1.8rem;
-        }
-
-        .cardapio-titulo strong {
-            color: red;
-        }
-        
-        .cardapio {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            line-height: 1.5em;
-            padding: 2rem 0;
-            margin-bottom: 2rem;
-        }
-
-        .cardapio__div-esquerda-img {
-            width: 50%;
-            margin: auto 3rem auto auto;
-        }
-
-        .cardapio__div-direita-img {
-            width: 50%;
-            margin: auto 0;
-        }
-
-        .cardapio__div-esquerda-img img, .cardapio__div-direita-img img {
-            width: 100%;
-        }
-
-        .cardapio__div-esquerda-texto {
-            width: 40%;
-            margin: auto 3rem auto auto;
-        }
-
-        .cardapio__div-direita-texto {
-            width: 40%;
-            margin: auto auto auto 3rem;
-        }
-
-        .cardapio__div-esquerda-texto h2, .cardapio__div-direita-texto h2 {
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-            font-size: 1.6rem;
-            line-height: 1.8rem;
-        }
-
-        .cardapio__div-esquerda-texto p, .cardapio__div-direita-texto p {
-            margin-bottom: 1rem;
-        }
-    
-        /* Estilos do Footer */
-        .footer__container {
-            min-height: 25vh;
-            background: #202020;
-            display: flex;
-            justify-content: center;
-            gap: 5rem;
-            padding: 2rem;
-            flex-wrap: wrap;
-            font-size: .9rem;
-        }
-    
-        .footer__div-logo {
-            max-width: 300px;
-            text-align: center;
-        }
-    
-        .imagem-logo-footer {
-            margin: 1rem 0;
-            width: 200px;
-        }
-    
-        .footer__div-logo h3 {
-            margin-bottom: 1rem;
-        }
-    
-        .footer__div-logo p {
-            text-align: justify;
-        }
-    
-        .footer__div-links {
-            margin: auto 0;
-        }
-    
-        .footer__lista-links li {
-            list-style: none;
-            margin-bottom: .5rem;
-        }
-    
-        .footer__midias-sociais {
-            list-style: none;
-            display: flex;
-            gap: .5rem;
-            margin-top: 3rem;
-        }
-    
-        .footer__div-video {
-            margin: auto 0;
-        }
-    
-        /* Estilos da Ultima Barra */
-        .ultima-barra p {
-            text-align: center;
-            font-size: .7rem;
-            padding: 1rem 0;
-        }
-    </style>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <!-- Aqui é o header e o menu de navegação -->
     <header class="header__container">
         <div class="header__div-logo">
-            <img class="imagem-logo-header" src="./logo.png" alt="">
+            <a href="./index.html"><img class="imagem-logo-header" src="./imagens/logo.png" alt=""></a>
         </div>
         <nav>
             <ul>
@@ -201,6 +22,19 @@
                 <li><a class="botao" href="./cardapio.html">Cardápio</a></li>
             </ul>
         </nav>
+        <div class="hamburguer">
+            <span class="hamburguer__linha"></span>
+            <span class="hamburguer__linha"></span>
+            <span class="hamburguer__linha"></span>
+        </div>
+        <div class="burguer__menu">
+            <ul>
+                <li><a class="link" href="./index.html">Home</a></li>
+                <li><a class="link" href="./sobreNos.html">Sobre Nós</a></li>
+                <li><a class="link" href="./contato.html">Contato</a></li>
+                <li><a class="link" href="./cardapio.html">Cardápio</a></li>
+            </ul>
+        </div>
     </header>
 
     <!-- Aqui começa o conteúdo -->
@@ -209,10 +43,10 @@
     <!-- Primeiro item do cardapio -->
     <section class="cardapio">
         <div class="cardapio__div-esquerda-img">
-            <img src="./burguer-01.jpg" alt="">
+            <img src="./imagens/burguer-01.jpg" alt="">
         </div>
         <div class="cardapio__div-direita-texto">
-            <h2>HTML/CSS/JAVA_SCRIPT</h2>
+            <h2>JAVASCRIPT</h2>
             <p>Pão de Brioche, Alface, Maionese da Casa, Frango Empanado e Queijo Emmental.</p>
         </div>
     </section>
@@ -224,17 +58,17 @@
             <p>Pão de Brioche, Muito Bacon, Queijo Prato, Maionese da Casa e Dois Hambúrgueres.</p>
         </div>
         <div class="cardapio__div-direita-img">
-            <img src="./burguer-02.jpg" alt="">
+            <img src="./imagens/burguer-02.jpg" alt="">
         </div>
     </section>
 
     <!-- Terceiro item do cardapio -->
     <section class="cardapio">
         <div class="cardapio__div-esquerda-img">
-            <img src="./burguer-03.jpg" alt="">
+            <img src="./imagens/burguer-03.jpg" alt="">
         </div>
         <div class="cardapio__div-direita-texto">
-            <h2>C/C++/C#</h2>
+            <h2>C++</h2>
             <p>Pão de Brioche, Molho de Tomate, Hambúrguer coberto com os queijos Muçarela, Provolone, Catupiry e Gorgonzola.</p>
         </div>
     </section>
@@ -243,10 +77,30 @@
     <section class="cardapio">
         <div class="cardapio__div-esquerda-texto">
             <h2>ASSEMBLY</h2>
-            <p> Pão de Brioche, Maionese de Bacon, Hambúrguer, Queijo Muçarela, Cebola Roxa, Alface e Tomate.</p>
+            <p>Pão de Brioche, Maionese de Bacon, Hambúrguer, Queijo Muçarela, Cebola Roxa, Alface e Tomate.</p>
         </div>
         <div class="cardapio__div-direita-img">
-            <img src="./burguer-04.jpg" alt="">
+            <img src="./imagens/burguer-04.jpg" alt="">
+        </div>
+    </section>
+
+    <!-- Cards para mobile -->
+    <section class="cardapio__cards">
+        <div class="cardapio__card">
+            <span class="card__imagem"><img src="./imagens/burguer-01.jpg" alt=""></span>
+            <span class="card__texto"><h3>JAVASCRIPT</h3><br><p>Pão de Brioche, Alface, Maionese da Casa, Frango Empanado e Queijo Emmental.</p></span>
+        </div>
+        <div class="cardapio__card">
+            <span class="card__imagem"><img src="./imagens/burguer-02.jpg" alt=""></span>
+            <span class="card__texto"><h3>PYTHON</h3><br><p>Pão de Brioche, Muito Bacon, Queijo Prato, Maionese da Casa e Dois Hambúrgueres.</p></span>
+        </div>
+        <div class="cardapio__card">
+            <span class="card__imagem"><img src="./imagens/burguer-03.jpg" alt=""></span>
+            <span class="card__texto"><h3>C++</h3><br><p>Pão de Brioche, Molho de Tomate, Hambúrguer coberto com os queijos Muçarela, Provolone, Catupiry e Gorgonzola.</p></span>
+        </div>
+        <div class="cardapio__card">
+            <span class="card__imagem"><img src="./imagens/burguer-04.jpg" alt=""></span>
+            <span class="card__texto"><h3>ASSEMBLY</h3><br><p>Pão de Brioche, Maionese de Bacon, Hambúrguer, Queijo Muçarela, Cebola Roxa, Alface e Tomate.</p></span>
         </div>
     </section>
     
@@ -254,7 +108,7 @@
     <!-- Aqui é o footer -->
     <footer class="footer__container">
         <div class="footer__div-logo">
-            <img class="imagem-logo-footer" src="./logo.png" alt="">
+            <img class="imagem-logo-footer" src="./imagens/logo.png" alt="">
             <h3>Tecnologia e Sabor Aliados!</h3>
             <p>Hamburgeria Web Design, fundada em 2000, juntamos as ideias de 3 grandes mentes alunos da engenharia da computação, para trazer à vocês o que há de melhor se tratando de hambúrgueres, tecnologia e criatividade.</p>
         </div>
@@ -266,10 +120,10 @@
                 <li><a class="link" href="./cardapio.html">Cardápio</a></li>
             </ul>
             <ul class="footer__midias-sociais">
-                <li><a href="#"><img src="./facebook.png" alt=""></a></li>
-                <li><a href="#"><img src="./instagram.png" alt=""></a></li>
-                <li><a href="#"><img src="/youtube.png" alt=""></a></li>
-                <li><a href="#"><img src="./whatsapp.png" alt=""></a></li>
+                <li><a href="#"><img src="./imagens/icones/facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="./imagens/icones/instagram.png" alt=""></a></li>
+                <li><a href="#"><img src="./imagens/icones/youtube.png" alt=""></a></li>
+                <li><a href="#"><img src="./imagens/icones/whatsapp.png" alt=""></a></li>
             </ul>
         </div>
         <div class="footer__div-video">
@@ -281,5 +135,6 @@
     <div class="ultima-barra">
         <p>Site desenvolvido por Lucas Gentil Menegatti (RA: 4201000), Bruno Rodrigues Fernandes (RA: 4200975) e Elias Kalil M. Saffi (RA: 4200987) como avaliação para a disciplina de "Desenvolvimento de Websites" do curso de Engenharia da Computação - 2022</p>
     </div>
+    <script src="./main.js"></script>
 </body>
 </html>

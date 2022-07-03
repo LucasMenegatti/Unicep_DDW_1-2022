@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./imagens/icones/favicon.ico">
     <title>Hamburgueria WebDesign! - Conheça nossa Hamburgueria!</title>
     <style>
         /* Estilo Geral */
@@ -201,7 +201,7 @@
     <!-- Aqui é o header e o menu de navegação -->
     <header class="header__container">
         <div class="header__div-logo">
-            <img class="imagem-logo-header" src="./logo.png" alt="">
+            <img class="imagem-logo-header" src="./imagens/logo.png" alt="">
         </div>
         <nav>
             <ul>
@@ -236,52 +236,7 @@
             </form>
 
             <!-- Código em JS para validar o formulário acima -->
-            <script>
-                let form = document.getElementById("form-contato");
-
-                form.addEventListener("submit", validaCadastro);  //Fica "escutando/observando o botao", qdo clicado, a funcao validaCadastro() é executada.
-                
-                function validaCadastro(evt) {
-            
-                    let erro = false;
-
-                    if (document.getElementById('nome').value == "") {
-                        document.getElementById('erro-nome').classList.remove('erro-oculto')
-                        erro = true;
-                    } else {
-                        document.getElementById('erro-nome').classList.add('erro-oculto')
-                    }
-
-                    if (document.getElementById('email').value == "") {
-                        document.getElementById('erro-email').classList.remove('erro-oculto')
-                        erro = true;
-                    } else {
-                        document.getElementById('erro-email').classList.add('erro-oculto')
-                    }
-
-                    if (document.getElementById('assunto').value == "") {
-                        document.getElementById('erro-assunto').classList.remove('erro-oculto')
-                        erro = true;
-                    } else {
-                        document.getElementById('erro-assunto').classList.add('erro-oculto')
-                    }
-
-                    if (document.getElementById('mensagem').value == "") {
-                        document.getElementById('erro-mensagem').classList.remove('erro-oculto')
-                        erro = true;
-                    } else {
-                        document.getElementById('erro-mensagem').classList.add('erro-oculto')
-                    }
-
-                    // Se erro !=0 entao alguma caixa de edicao nao foi preenchida entao, preventDefault() é executado, cancelando assim o evento de click do botao.
-                    if (erro === true) evt.preventDefault(); else {
-                        alert("mensagem enviada!"); // Notifica que a mensagem foi enviada
-                        evt.preventDefault(); //Acrescentei para evitar que seja exibido o erro 405, mas será retirado com a implementação do back-end
-                        location.reload(); // Recarrega a página
-                    }
-
-                }
-            </script>
+            <script src="./contato.js"></script>
         </div>
         <div class="contato__div-direita">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4399.779070934799!2d-47.932365658200325!3d-21.98223188839963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b876fb799a433f%3A0xa0ac3fffc8b5f135!2sUnicep%20-%20Centro%20Universit%C3%A1rio%20Central%20Paulista!5e0!3m2!1spt-BR!2sbr!4v1652618270313!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -291,7 +246,7 @@
     <!-- Aqui é o footer -->
     <footer class="footer__container">
         <div class="footer__div-logo">
-            <img class="imagem-logo-footer" src="./logo.png" alt="">
+            <img class="imagem-logo-footer" src="./imagens/logo.png" alt="">
             <h3>Tecnologia e Sabor Aliados!</h3>
             <p>Hamburgeria Web Design, fundada em 2000, juntamos as ideias de 3 grandes mentes alunos da engenharia da computação, para trazer à vocês o que há de melhor se tratando de hambúrgueres, tecnologia e criatividade.</p>
         </div>
@@ -303,10 +258,10 @@
                 <li><a class="link" href="./cardapio.html">Cardápio</a></li>
             </ul>
             <ul class="footer__midias-sociais">
-                <li><a href="#"><img src="./facebook.png" alt=""></a></li>
-                <li><a href="#"><img src="./instagram.png" alt=""></a></li>
-                <li><a href="#"><img src="/youtube.png" alt=""></a></li>
-                <li><a href="#"><img src="./whatsapp.png" alt=""></a></li>
+                <li><a href="#"><img src="./imagens/icones/facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="./imagens/icones/instagram.png" alt=""></a></li>
+                <li><a href="#"><img src="./imagens/icones/youtube.png" alt=""></a></li>
+                <li><a href="#"><img src="./imagens/icones/whatsapp.png" alt=""></a></li>
             </ul>
         </div>
         <div class="footer__div-video">

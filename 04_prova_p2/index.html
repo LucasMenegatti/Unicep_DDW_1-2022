@@ -4,261 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./imagens/icones/favicon.ico">
+    <link rel="stylesheet" href="./styles.css">
     <title>Hamburgueria WebDesign!</title>
-    <style>
-        /* Estilo Geral */
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            background: black;
-            font-family: sans-serif;
-            color: white;
-        }
-    
-        .imagem-logo-header {
-            margin-top: 2rem;
-            width: 250px;
-            margin: 1rem 2rem;
-        }
-    
-        .botao {
-            background-color: red;
-            color: white;
-            padding: 1rem;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 1.5rem;
-            text-transform: uppercase;
-        }
-    
-        .botao:hover {
-            background-color: rgb(187, 0, 0);
-        }
-    
-        /* Estilos do Header Menu */    
-        .header__div-logo {
-            width: fit-content;
-            margin: 0 auto;
-        }
-
-        .header__div-logo a img {
-            max-width: 300px;
-        }
-    
-        .header__container nav {
-            margin: auto 1rem;
-        }
-    
-        .link {
-            color: white;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-    
-        .link:hover {
-            text-decoration: underline;
-            cursor: pointer;
-        }
-    
-        /* Estilos do Banner */
-        .banner__container {
-            display: flex;
-            justify-content: center;
-            padding: 1rem;
-            background-image: url(./fundo-preto-da-parede-de-tijolo.jpg);
-        }
-
-        .div-imagem {
-            max-width: 300px;
-            margin: auto 0;
-        }
-
-        .div-imagem img {
-            width: 100%;
-        }
-    
-        .div-texto {
-            height: fit-content;
-            margin: auto 0;
-            max-width: 300px;
-        }
-
-        .div-texto h1 {
-            color: white;
-        }
-    
-        .banner__container div strong {
-            font-size: 2rem;
-            text-transform: uppercase;
-            font-weight: bold;
-            color: red;
-        }
-    
-        /* Estilos do Footer */
-        .footer__container {
-            min-height: 25vh;
-            background: #202020;
-            display: flex;
-            justify-content: center;
-            gap: 5rem;
-            padding: 2rem;
-            flex-wrap: wrap;
-            font-size: .9rem;
-        }
-    
-        .footer__div-logo {
-            max-width: 300px;
-            text-align: center;
-        }
-    
-        .imagem-logo-footer {
-            margin: 1rem 0;
-            width: 200px;
-        }
-    
-        .footer__div-logo h3 {
-            margin-bottom: 1rem;
-        }
-    
-        .footer__div-logo p {
-            text-align: justify;
-        }
-    
-        .footer__div-links {
-            margin: auto 0;
-        }
-    
-        .footer__lista-links li {
-            list-style: none;
-            margin-bottom: .5rem;
-        }
-    
-        .footer__midias-sociais {
-            list-style: none;
-            display: flex;
-            gap: .5rem;
-            margin-top: 3rem;
-        }
-    
-        .footer__div-video {
-            width: 400px;
-            height: 220px;
-            margin: auto 0;
-        }
-
-        .footer__div-video iframe {
-            width: 100%;
-            height: 100%;
-        }
-    
-        /* Estilos da Ultima Barra */
-        .ultima-barra p {
-            text-align: center;
-            font-size: .7rem;
-            padding: 1rem 0;
-        }
-
-        @media (max-width: 900px) {            
-            .div-texto h1 {
-                font-size: 1.2rem;
-            }
-            
-            .header__container {
-                background: #202020;
-                padding: .1rem;
-                font-size: 1.5rem;
-            }
-            
-            .header__container nav ul {
-                display: none;
-                justify-content: left;
-                gap: 2rem;
-                list-style: none;
-            }
-            
-            .hamburguer {
-                width: fit-content;
-                margin: 0 auto;
-            }
-
-            .hamburguer__linha {
-                display: block;
-                height: 6px;
-                width: 40px;
-                margin: 8px 0;
-                background-color: white;
-                -webkit-transition: 0.3s;
-                transition: 0.3s;
-            }
-
-            .burguer__menu {
-                position: fixed;
-                top: -10000px;
-                gap: 0;
-                flex-direction: column;
-                background-color: rgba(0, 0, 0, 0.95);
-                width: 100%;
-                text-align: center;
-                -webkit-transition: 0.3s;
-                transition: 0.3s;
-            }
-
-            .burguer__menu ul li {
-                padding: .5rem 0;
-            }
-
-            .burguer__menu.active {
-                top: 267px;
-            }
-
-            .hamburguer.active .hamburguer__linha:nth-child(2) {
-                opacity: 0;
-            }
-
-            .hamburguer.active .hamburguer__linha:nth-child(1) {
-                transform: translateY(14px) rotate(45deg);
-            }
-
-            .hamburguer.active .hamburguer__linha:nth-child(3) {
-                transform: translateY(-14px) rotate(-45deg);
-            }
-        }
-
-        @media (min-width: 901px) {
-            .div-texto h1 {
-                font-size: 2rem;
-            }
-
-            .burguer__menu {
-                display: none;
-            }
-
-            .header__container {
-            background: #202020;
-            min-height: 20vh;
-            display: grid;
-            grid-template-columns: 40% 60%;
-            font-size: 1.5rem;
-            }
-            
-            .header__container nav ul {
-            display: flex;
-            justify-content: left;
-            gap: 2rem;
-            list-style: none;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Aqui é o header e o menu de navegação -->
     <header class="header__container">
         <div class="header__div-logo">
-            <a href="./index.html"><img class="imagem-logo-header" src="./logo.png" alt=""></a>
+            <a href="./index.html"><img class="imagem-logo-header" src="./imagens/logo.png" alt=""></a>
         </div>
         <nav>
             <ul>
@@ -289,14 +43,14 @@
             <h1>O Hambúrguer mais <strong>delicioso</strong> que você já experimentou</h1>
         </div>
         <div class="div-imagem">
-            <img src="./imagem-banner.png" alt="">
+            <img src="./imagens/imagem-banner.png" alt="">
         </div>
     </section>
 
     <!-- Aqui é o footer -->
     <footer class="footer__container">
         <div class="footer__div-logo">
-            <img class="imagem-logo-footer" src="./logo.png" alt="">
+            <img class="imagem-logo-footer" src="./imagens/logo.png" alt="">
             <h3>Tecnologia e Sabor Aliados!</h3>
             <p>Hamburgeria Web Design, fundada em 2000, juntamos as ideias de 3 grandes mentes alunos da engenharia da computação, para trazer à vocês o que há de melhor se tratando de hambúrgueres, tecnologia e criatividade.</p>
         </div>
@@ -308,10 +62,10 @@
                 <li><a class="link" href="./cardapio.html">Cardápio</a></li>
             </ul>
             <ul class="footer__midias-sociais">
-                <li><a href="#"><img src="./facebook.png" alt=""></a></li>
-                <li><a href="#"><img src="./instagram.png" alt=""></a></li>
-                <li><a href="#"><img src="/youtube.png" alt=""></a></li>
-                <li><a href="#"><img src="./whatsapp.png" alt=""></a></li>
+                <li><a href="#"><img src="./imagens/icones/facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="./imagens/icones/instagram.png" alt=""></a></li>
+                <li><a href="#"><img src="./imagens/icones/youtube.png" alt=""></a></li>
+                <li><a href="#"><img src="./imagens/icones/whatsapp.png" alt=""></a></li>
             </ul>
         </div>
         <div class="footer__div-video">
@@ -323,19 +77,6 @@
     <div class="ultima-barra">
         <p>Site desenvolvido por Lucas Gentil Menegatti (RA: 4201000), Bruno Rodrigues Fernandes (RA: 4200975) e Elias Kalil M. Saffi (RA: 4200987) como avaliação para a disciplina de "Desenvolvimento de Websites" do curso de Engenharia da Computação - 2022</p>
     </div>
-    <script>
-        const hamburguer = document.querySelector(".hamburguer");
-        const burguerMenu = document.querySelector(".burguer__menu");
-
-        hamburguer.addEventListener("click", () => {
-            hamburguer.classList.toggle("active");
-            burguerMenu.classList.toggle("active");
-        })
-
-        document.querySelectorAll(".link").forEach(n => n.addEventListener("click", () => {
-            hamburguer.classList.remove("active");
-            burguerMenu.classList.remove("active");
-        }))
-    </script>
+    <script src="./main.js"></script>
 </body>
 </html>
