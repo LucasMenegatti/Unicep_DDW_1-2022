@@ -258,90 +258,151 @@ body {
 .cardapio-titulo {
     text-align: center;
     margin: 1rem 0;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
 }
 
 .cardapio-titulo strong {
     color: red;
 }
 
-.cardapio {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.cardapio__cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cardapio__card {
+    max-width: 270px;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #505050;
+    border-radius: 8px;
+}
+
+.card__imagem, .card__imagem img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card__texto {
+    text-align: center;
+}
+
+@media screen and (min-width:900px) {
+    .cardapio-titulo {
+        font-size: 1.8rem;
+    }
+
+    .cardapio__cards {
+        margin: auto;
+        width: 80%;
+    }
+}
+
+/**************************************************************************
+/*                       Página Sobre Nos
+/**************************************************************************/
+
+.flex-container {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
     line-height: 1.5em;
-    padding: 2rem 0;
-    margin-bottom: 2rem;
+    padding: 1rem;
+    gap: 1rem;
 }
 
-.cardapio__div-esquerda-img {
-    width: 50%;
-    margin: auto 3rem auto auto;
+.sobreNos__texto {
+    max-width: 500px;
+    text-align: center;
 }
 
-.cardapio__div-direita-img {
-    width: 50%;
-    margin: auto 0;
+.sobreNos__imagem {
+    max-width: 400px;
 }
 
-.cardapio__div-esquerda-img img, .cardapio__div-direita-img img {
+.flex-container div img {
     width: 100%;
 }
 
-.cardapio__div-esquerda-texto {
-    width: 40%;
-    margin: auto 3rem auto auto;
-}
-
-.cardapio__div-direita-texto {
-    width: 40%;
-    margin: auto auto auto 3rem;
-}
-
-.cardapio__div-esquerda-texto h2, .cardapio__div-direita-texto h2 {
+.flex-container h2 {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 1rem;
+    text-align: center;
     font-size: 1.6rem;
     line-height: 1.8rem;
 }
 
-.cardapio__div-esquerda-texto p, .cardapio__div-direita-texto p {
-    margin-bottom: 1rem;
+.flex-container h2 strong {
+    font-weight: 800;
+    color: red;
 }
 
-.cardapio__cards {
+.sobreNos4imagnes {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.sobreNos4imagnes__imagens {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.sobreNos4imagnes img {
+    width: 250px;
+    margin: .2rem;
+}
+
+/**************************************************************************
+/*                       Página Contato
+/**************************************************************************/
+.contato__flexitem {
+    width: 40%;
+    min-width: 320px;
+    min-height: 400px;
+}
+
+.contato__flexitem form input, form textarea {
+    width: 80%;
+    padding: .3rem;
+    margin: .2rem 0;
+    resize: none;  
+}
+
+.contato__flexitem ul {
+    list-style: none;
+}
+
+.contato__flexitem iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#enviar {
+    width: 50%;
+    background-color: red;
+    color: white;
+    padding: 1rem;
+    margin-top: .2rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.erros-formulario {
+    color: red;
+    font-size: .8rem;
+}
+
+.erro-oculto {
     display: none;
-}
-
-@media screen and (max-width:900px) {
-    .cardapio-titulo {
-        font-size: 1.3rem;
-    }
-
-    .cardapio {
-        display: none;
-    }
-
-    .cardapio__cards {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    .cardapio__card {
-        max-width: 270px;
-        padding: 1rem;
-        margin: 1rem;
-        background-color: #505050;
-        border-radius: 8px;
-    }
-
-    .card__imagem, .card__imagem img {
-        width: 100%;
-        border-radius: 8px;
-    }
-
-    .card__texto {
-        text-align: center;
-    }
 }

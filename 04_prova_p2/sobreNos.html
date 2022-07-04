@@ -5,190 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./imagens/icones/favicon.ico">
+    <link rel="stylesheet" href="./styles.css">
     <title>Hamburgueria WebDesign! - Conheça nossa Hamburgueria!</title>
     <style>
-        /* Estilo Geral */
-        * {
-            margin: 0;
-            padding: 0;
-        }
+           
         
-        body {
-            background: black;
-            font-family: sans-serif;
-            color: white;
-        }
     
-        .imagem-logo-header {
-            margin-top: 2rem;
-            width: 250px;
-            margin: 1rem 2rem;
-        }
-    
-        .botao {
-            background-color: red;
-            color: white;
-            padding: 1rem;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 1.5rem;
-            text-transform: uppercase;
-        }
-    
-        .botao:hover {
-            background-color: rgb(187, 0, 0);
-        }
-    
-        /* Estilos do Header Menu */
-        .header__container {
-            background: #202020;
-            min-height: 20vh;
-            display: grid;
-            grid-template-columns: 44% 56%;
-            font-size: 1.5rem;
-        }
-    
-        .header__div-logo {
-            margin: auto 0 auto auto;
-        }
-    
-        .header__container nav {
-            margin: auto 1rem;
-        }
-    
-        .header__container nav ul {
-            display: flex;
-            justify-content: left;
-            gap: 2rem;
-            list-style: none;
-        }
-    
-        .link {
-            color: white;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-    
-        .link:hover {
-            text-decoration: underline;
-            cursor: pointer;
-        }
-    
-        /* Estilos do Conteúdo */
-        .sobreNos {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            line-height: 1.5em;
-            padding: 2rem 0;
-        }
-
-        .sobreNos__div-esquerda {
-            width: 40%;
-            margin: auto 3rem auto auto;
-        }
-
-        .sobreNos__div-esquerda h2 {
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-            text-align: center;
-            font-size: 1.6rem;
-            line-height: 1.8rem;
-        }
-
-        .sobreNos__div-esquerda h2 strong {
-            font-weight: 800;
-            color: red;
-        }
-
-        .sobreNos__div-esquerda p {
-            margin-bottom: 1rem;
-        }
-
-        .sobreNos__div-direita {
-            width: 50%;
-            margin: auto 0;
-        }
-
-        .sobreNos__div-direita img {
-            width: 100%;
-        }
-
-        .sobreNos4imagnes {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin: 1rem 0;
-            flex-wrap: wrap;
-        }
-
-        .sobreNos4imagnes img {
-            width: 250px;
-        }
-    
-        /* Estilos do Footer */
-        .footer__container {
-            min-height: 25vh;
-            background: #202020;
-            display: flex;
-            justify-content: center;
-            gap: 5rem;
-            padding: 2rem;
-            flex-wrap: wrap;
-            font-size: .9rem;
-        }
-    
-        .footer__div-logo {
-            max-width: 300px;
-            text-align: center;
-        }
-    
-        .imagem-logo-footer {
-            margin: 1rem 0;
-            width: 200px;
-        }
-    
-        .footer__div-logo h3 {
-            margin-bottom: 1rem;
-        }
-    
-        .footer__div-logo p {
-            text-align: justify;
-        }
-    
-        .footer__div-links {
-            margin: auto 0;
-        }
-    
-        .footer__lista-links li {
-            list-style: none;
-            margin-bottom: .5rem;
-        }
-    
-        .footer__midias-sociais {
-            list-style: none;
-            display: flex;
-            gap: .5rem;
-            margin-top: 3rem;
-        }
-    
-        .footer__div-video {
-            margin: auto 0;
-        }
-    
-        /* Estilos da Ultima Barra */
-        .ultima-barra p {
-            text-align: center;
-            font-size: .7rem;
-            padding: 1rem 0;
-        }
+        
     </style>
 </head>
 <body>
     <!-- Aqui é o header e o menu de navegação -->
     <header class="header__container">
         <div class="header__div-logo">
-            <img class="imagem-logo-header" src="./imagens/logo.png" alt="">
+            <a href="./index.html"><img class="imagem-logo-header" src="./imagens/logo.png" alt=""></a>
         </div>
         <nav>
             <ul>
@@ -198,25 +28,42 @@
                 <li><a class="botao" href="./cardapio.html">Cardápio</a></li>
             </ul>
         </nav>
+        <div class="hamburguer">
+            <span class="hamburguer__linha"></span>
+            <span class="hamburguer__linha"></span>
+            <span class="hamburguer__linha"></span>
+        </div>
+        <div class="burguer__menu">
+            <ul>
+                <li><a class="link" href="./index.html">Home</a></li>
+                <li><a class="link" href="./sobreNos.html">Sobre Nós</a></li>
+                <li><a class="link" href="./contato.html">Contato</a></li>
+                <li><a class="link" href="./cardapio.html">Cardápio</a></li>
+            </ul>
+        </div>
     </header>
 
     <!-- Aqui começa o conteúdo -->
-    <section class="sobreNos">
-        <div class="sobreNos__div-esquerda">
+    <section class="flex-container">
+        <div class="sobreNos__texto">
             <h2>Conheça a nossa <strong>História!</strong></h2>
-            <p>Os fãs de programação precisam conhecer essa hamburgueria. Além da decoração no ambiente, você pode aproveitar lanches deliciosos,  várias tecnologias, realizar programação, escolher seu hamburguer da sua linguagem favorita.</p>
+            <p>Os fãs de programação precisam conhecer essa hamburgueria. Além da decoração no ambiente, você pode aproveitar lanches deliciosos,  várias tecnologias, realizar programação, escolher seu hamburguer da sua linguagem favorita.</p><br>
             <p>Se você é apaixonado por um hambúrguer com tecnologia, chegou ao lugar certo. A Web Design Hamburgueria é considerada uma das principais referências no assunto. Isso porque, além de um Hamburguer simplesmente maravilhoso, você tem a opção de "brincar" com VS Code e criar seu site totalmente amador grátis, e ve-lô sendo analisado por outros fregueses.</p>
         </div>
-        <div class="sobreNos__div-direita">
+        <div class="sobreNos__imagem">
             <img src="./imagens/fachada.jpg" alt="">
         </div>
     </section>
 
     <section class="sobreNos4imagnes">
-        <img src="./imagens/internas/01-interna.webp" alt="">
-        <img src="./imagens/internas/02-batata.webp" alt="">
-        <img src="./imagens/internas/03-hamburguer.webp" alt="">
-        <img src="./imagens/internas/04-milk-shake.webp" alt="">
+        <div class="sobreNos4imagnes__imagens">
+            <img src="./imagens/internas/01-interna.webp" alt="">
+            <img src="./imagens/internas/02-batata.webp" alt="">
+        </div>
+        <div class="sobreNos4imagnes__imagens">
+            <img src="./imagens/internas/03-hamburguer.webp" alt="">
+            <img src="./imagens/internas/04-milk-shake.webp" alt="">
+        </div>
     </section>
     
 
@@ -242,7 +89,7 @@
             </ul>
         </div>
         <div class="footer__div-video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/JQFYEKijFIw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/JQFYEKijFIw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </footer>
 
@@ -250,5 +97,7 @@
     <div class="ultima-barra">
         <p>Site desenvolvido por Lucas Gentil Menegatti (RA: 4201000), Bruno Rodrigues Fernandes (RA: 4200975) e Elias Kalil M. Saffi (RA: 4200987) como avaliação para a disciplina de "Desenvolvimento de Websites" do curso de Engenharia da Computação - 2022</p>
     </div>
+
+    <script src="./main.js"></script>
 </body>
 </html>
